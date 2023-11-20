@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 const SettingLayout = ({ children }) => {
   return (
@@ -8,17 +9,17 @@ const SettingLayout = ({ children }) => {
       </header>
       <aside>
         <nav>
-          <a href="/home">Home</a>
-          <a href="/discover">Discover</a>
-          <a href="/blog">Blog</a>
-          <a href="/profile">Profile</a>
+          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/discover">Discover</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/profile">Profile</NavLink>
         </nav>
       </aside>
       <aside>
-        <a href="/profile/information">Porfile Information</a>
-        <a href="/profile/notification">Profile Notification</a>
-        <a href="/profile/password-manager">Password Manager</a>
-        <a href="/profile/helper-center">Helper Center</a>
+        <NavLink to="/profile/information">Porfile Information</NavLink>
+        <NavLink to="/profile/notification">Profile Notification</NavLink>
+        <NavLink to="/profile/password-manager">Password Manager</NavLink>
+        <NavLink to="/profile/helper-center">Helper Center</NavLink>
       </aside>
       <main>{children}</main>
     </>

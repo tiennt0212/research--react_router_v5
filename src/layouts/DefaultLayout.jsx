@@ -1,14 +1,14 @@
-import React from "react";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 const DefaultLayout = ({ children }) => {
   return (
     <>
       <header>
         <nav>
-          <a href="/home">Home</a>
-          <a href="/discover">Discover</a>
-          <a href="/blog">Blog</a>
-          <a href="/profile">Profile</a>
+          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/discover">Discover</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/profile">Profile</NavLink>
         </nav>
       </header>
       <main>{children}</main>

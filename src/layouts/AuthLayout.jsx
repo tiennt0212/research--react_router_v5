@@ -1,17 +1,18 @@
 import React from "react";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 const AuthLayout = ({ children }) => {
   return (
     <>
       <ul>
         <li>
-          <a href="/auth/sign-in">Sign In</a>
+          <NavLink to="/auth/sign-in">Sign In</NavLink>
         </li>
         <li>
-          <a href="/auth/sign-up">Sign Up</a>
+          <NavLink to="/auth/sign-up">Sign Up</NavLink>
         </li>
         <li>
-          <a href="/auth/reset-password">Reset Password</a>
+          <NavLink to="/auth/reset-password">Reset Password</NavLink>
         </li>
       </ul>
       <main>{children}</main>
