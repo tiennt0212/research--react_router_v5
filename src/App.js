@@ -1,23 +1,23 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import "./App.scss";
-import { DefaultLayout, AuthLayout, SettingLayout } from "./layouts";
 import {
-  PrivacyPolicy,
-  TermsOfUse,
-  SignIn,
-  SignUp,
-  ResetPw,
   Blog,
   BlogDetails,
   Discover,
   Home,
+  PageNotFound,
+  PrivacyPolicy,
+  ProfileHelperCenter,
   ProfileInfo,
   ProfileNotification,
   ProfilePwManager,
-  ProfileHelperCenter,
-  PageNotFound,
+  ResetPw,
+  SignIn,
+  SignUp,
+  TermsOfUse,
 } from "./containers";
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { AuthLayout, DefaultLayout, SettingLayout } from "./layouts";
 
 function App() {
   return (
@@ -86,11 +86,11 @@ function App() {
               <Route path="/discover">
                 <Discover />
               </Route>
-              <Route exact path="/blog">
+              <Route path="/blog">
                 <Blog />
-              </Route>
-              <Route path="/blog/:blogId">
-                <BlogDetails />
+                <Route path="/blog/:blogId">
+                  <BlogDetails />
+                </Route>
               </Route>
               <Route path="/*">
                 <Redirect to="/404" />
