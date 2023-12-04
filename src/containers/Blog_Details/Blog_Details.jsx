@@ -7,7 +7,7 @@ import { EXAMPLE_BLOG_DATA } from "utils/data";
 
 const BlogDetails = () => {
   const { blogId } = useParams();
-  console.log(blogId);
+  // eslint-disable-next-line
   const blog = EXAMPLE_BLOG_DATA.find((blog) => blog.id == blogId);
   const history = useHistory();
   return (
