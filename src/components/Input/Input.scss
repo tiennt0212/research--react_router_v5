@@ -1,0 +1,52 @@
+// Common <input> styles
+input {
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.7rem;
+  margin: 0;
+  color: inherit;
+  &[type="checkbox"] {
+    --size: 2.5rem;
+    --uncheck-icon: url("../../assets/icons/checkbox-uncheck.svg");
+    --check-icon: url("../../assets/icons/checkbox-checked.svg");
+    --check-color: #087aff;
+    width: 0;
+    height: var(--size);
+    margin: 0 var(--size) 0 0;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: var(--size);
+      height: inherit;
+      background-image: var(--uncheck-icon);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &:checked::after {
+      background-image: none;
+      background-color: var(--check-color);
+      -webkit-mask-image: var(--check-icon);
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-color: green;
+    }
+  }
+
+  &::placeholder {
+    color: #808080;
+    font-size: 1.7rem;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+  &:not([type="checkbox"], [type="radio"]) {
+    height: 3.2rem;
+  }
+}

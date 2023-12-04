@@ -1,0 +1,12 @@
+// Common <button> styles
+button {
+  background-color: transparent;
+  border: solid 0.1rem #fff;
+  color: inherit;
+  height: 3.3rem;
+  padding: 0.6rem;
+  border-radius: 0.2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}

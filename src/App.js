@@ -1,6 +1,8 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
-import "./App.scss";
+import "styles/reset.css";
+import "styles/global.css";
+import "styles/App.scss";
 import {
   Blog,
   BlogDetails,
